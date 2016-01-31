@@ -5,6 +5,7 @@ Windows ortamında bu sözlüğün güzel bir benzerini kullanmaktaydım. Linux 
 
 Çalıştırma
 
+
 main.py dosyası yardımı ile çalıştırabilirsiniz.
 
 Windows için binary halini winx86binary dizininin altında bulabilirsiniz. main exe aracılığıyla çalıştırabilirsiniz. Binary sürüm için gereklilikler geçerli değildir.
@@ -12,6 +13,7 @@ Windows için binary halini winx86binary dizininin altında bulabilirsiniz. main
 
 
 Gereklilikler
+
 
 Python 2x sürümü (3x ile test etmedim muhtemelen sytax problemleri çıkacaktır)
 
@@ -21,6 +23,7 @@ QT ve PyQt
 
 Bilinen Sorun/konular
 
+
 *hız problemleri
 
 *Sql injection imkanı :)
@@ -28,6 +31,7 @@ Bilinen Sorun/konular
 
 
 Eklenecekler
+
 
 Boot ile birlikte başlatma seçeneği
 
