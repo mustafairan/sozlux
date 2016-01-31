@@ -14,6 +14,7 @@ Windows için binary halini winx86binary dizininin altında bulabilirsiniz. main
 Gereklilikler
 
 Python 2x sürümü (3x ile test etmedim muhtemelen sytax problemleri çıkacaktır)
+
 QT ve PyQt
 
 
@@ -21,6 +22,7 @@ QT ve PyQt
 Bilinen Sorun/konular
 
 *hız problemleri
+
 *Sql injection imkanı :)
 
 
@@ -28,6 +30,10 @@ Bilinen Sorun/konular
 Eklenecekler
 
 Boot ile birlikte başlatma seçeneği
+
 Tray ikonuna saklanabilme oradan açılabilme
+
 Bazı klavye kısayolları
+
 Kendi sözlüğünü oluşturma imkanı
+
