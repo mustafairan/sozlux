@@ -17,7 +17,7 @@ Gereklilikler
 
 Python 2x sürümü (3x ile test etmedim muhtemelen sytax problemleri çıkacaktır)
 
-QT ve PyQt
+QT ve PyQt4
 
 
 
