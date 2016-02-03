@@ -6,10 +6,12 @@ import sys
 
 
 try:
-    from PyQt4 import QtCore, QtGui
+    from PyQt4 import QtCore, QtGui,uic
 except:
     print u"PyQt modülü yüklü değil.\nPyQt 4.5 veya üzeri bir sürüm yükledikten tekrar deneyin."
     sys.exit()
+
+
 
 from ui_sozluk import Ui_MainWindow
 app = QtGui.QApplication(sys.argv)
@@ -43,7 +45,7 @@ class Sozlux(QtGui.QMainWindow, Ui_MainWindow):
 
         self. _pasteIcon =QtGui.QIcon("paste.png")
         self.pushButton_3.setIcon(self._pasteIcon)
-        print  list(QtGui.QStyleFactory.keys() )
+        #print  list(QtGui.QStyleFactory.keys() )
 
         self.actionCleanlooks.triggered.connect(lambda: self.setAppearance('Cleanlooks'))
         self.actionPlastique.triggered.connect(lambda: self.setAppearance('Plastique'))
@@ -57,6 +59,11 @@ class Sozlux(QtGui.QMainWindow, Ui_MainWindow):
 
 
 
+        # self.trayIcon.activated(self.trayIcon.Trigger).connect(lambda:self.trayIconEventHandle("Trigger"))
+        # self.trayIcon.activated(self.trayIcon.Context).connect(lambda:self.trayIconEventHandle("Context"))
+        # self.trayIcon.activated(self.trayIcon.MiddleClick).connect(lambda:self.trayIconEventHandle("MiddleClick"))
+        # self.trayIcon.activated(self.trayIcon.DoubleClick).connect(lambda:self.trayIconEventHandle("DoubleClick"))
+        self.connect(self.trayIcon,QtCore.SIGNAL( "activated(QSystemTrayIcon::ActivationReason)"),self.trayIconEventHandle)
 
 
 
@@ -79,6 +86,46 @@ class Sozlux(QtGui.QMainWindow, Ui_MainWindow):
         self.opacitySlider.valueChanged.connect(lambda: QtGui.QMainWindow.setWindowOpacity(self,self.opacitySlider.value()/100.0))
 
         self.relatedList.setSortingEnabled(True)
+
+        self.trayContextMenu=QtGui.QMenu()
+        #actions specified in ui file using designer
+        self.trayContextMenu.addAction(self.actionExit)
+        self.actionExit.triggered.connect(self.closeApplication)
+        self.trayContextMenu.addAction(self.actionShow)
+        self.actionShow.triggered.connect(lambda : self.trayIconEventHandle("Show"))
+        self.trayContextMenu.addAction(self.actionHide)
+        self.actionHide.triggered.connect(lambda: self.trayIconEventHandle("Hide"))
+        self.trayIcon.setContextMenu(self.trayContextMenu)
+
+
+
+    def trayIconEventHandle(self,Reason=None):
+        
+        #print Reason
+        if Reason==self.trayIcon.Trigger:
+            if self.isHidden():
+                self.show()
+            elif not self.isHidden():
+                self.hide()
+            else:
+                pass
+        elif Reason==self.trayIcon.Context:
+            self.trayContextMenu.show()
+
+        elif Reason==self.trayIcon.MiddleClick:
+            #print "MiddleClick"
+            pass
+        elif Reason==self.trayIcon.DoubleClick:
+            #print "DoubleClick"
+            pass
+        elif Reason=="Show":
+            if self.isHidden():
+                self.show()
+        elif Reason=="Hide":
+            if not self.isHidden():
+                self.hide()
+        elif Reason=="Exit":
+            self.closeApplication()
 
     def setAppearance(self, appearance_choice):
         """
@@ -137,7 +184,6 @@ class Sozlux(QtGui.QMainWindow, Ui_MainWindow):
         if len(searchText) <= 0:
             pass
         else:
-            #TODO search text boş ise bişey yapma (burada konrol et en alta kadar)
             query1=query2=("Select `SozcukAdi` from {} Where `SozcukAdi` LIKE '{}%' ".format(self.category,searchText))#qyery for similars
             query2=("Select `SozcukAdi` from {} Where `SozcukAdi` LIKE '%{}%' ".format(self.category,searchText))#qyery for similars
             cursor = self.conn.cursor()

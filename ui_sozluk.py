@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'sozluk.ui'
 #
-# Created: Thu Jan 28 05:58:09 2016
+# Created: Wed Feb  3 18:10:37 2016
 #      by: PyQt4 UI code generator 4.11.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -200,6 +200,12 @@ class Ui_MainWindow(object):
         self.actionQtcurve.setObjectName(_fromUtf8("actionQtcurve"))
         self.actionMotif = QtGui.QAction(MainWindow)
         self.actionMotif.setObjectName(_fromUtf8("actionMotif"))
+        self.actionExit = QtGui.QAction(MainWindow)
+        self.actionExit.setObjectName(_fromUtf8("actionExit"))
+        self.actionHide = QtGui.QAction(MainWindow)
+        self.actionHide.setObjectName(_fromUtf8("actionHide"))
+        self.actionShow = QtGui.QAction(MainWindow)
+        self.actionShow.setObjectName(_fromUtf8("actionShow"))
         self.menuG_r_n_m.addAction(self.actionWindows)
         self.menuG_r_n_m.addAction(self.actionPlastique)
         self.menuG_r_n_m.addAction(self.actionOxygen)
@@ -210,6 +216,9 @@ class Ui_MainWindow(object):
         self.menuG_r_n_m.addAction(self.actionQtcurve)
         self.menuG_r_n_m.addAction(self.actionMotif)
         self.menuMenu.addAction(self.menuG_r_n_m.menuAction())
+        self.menuMenu.addAction(self.actionHide)
+        self.menuMenu.addAction(self.actionExit)
+        self.menuMenu.addAction(self.actionShow)
         self.menubar.addAction(self.menuMenu.menuAction())
 
         self.retranslateUi(MainWindow)
@@ -255,4 +264,7 @@ class Ui_MainWindow(object):
         self.actionGTK.setText(_translate("MainWindow", "GTK", None))
         self.actionQtcurve.setText(_translate("MainWindow", "Qtcurve", None))
         self.actionMotif.setText(_translate("MainWindow", "Motif", None))
+        self.actionExit.setText(_translate("MainWindow", "Çıkış", None))
+        self.actionHide.setText(_translate("MainWindow", "Gizle", None))
+        self.actionShow.setText(_translate("MainWindow", "Göster", None))
 

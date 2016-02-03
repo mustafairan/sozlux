@@ -415,6 +415,9 @@
      <addaction name="actionMotif"/>
     </widget>
     <addaction name="menuG_r_n_m"/>
+    <addaction name="actionHide"/>
+    <addaction name="actionExit"/>
+    <addaction name="actionShow"/>
    </widget>
    <addaction name="menuMenu"/>
   </widget>
@@ -462,6 +465,21 @@
   <action name="actionMotif">
    <property name="text">
     <string>Motif</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Çıkış</string>
+   </property>
+  </action>
+  <action name="actionHide">
+   <property name="text">
+    <string>Gizle</string>
+   </property>
+  </action>
+  <action name="actionShow">
+   <property name="text">
+    <string>Göster</string>
    </property>
   </action>
  </widget>
