@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 #/usr/bin/env python2
 
+
+
+
 import sqlite3
 import sys
 
@@ -266,13 +269,6 @@ class Sozlux(QtGui.QMainWindow, Ui_MainWindow):
 
 
 
-
-
-
-
-
-
-
     def relatedSelected(self):
         #self.searchBox.setText()#changes whole content
         #queryit and result# changes only result
@@ -333,6 +329,8 @@ class Sozlux(QtGui.QMainWindow, Ui_MainWindow):
     #         self.printRelatives(currentText)
 
     def closeApplication(self):
+        self.trayIcon.hide()
+
         self.conn.close()
         sys.exit(0)
 if __name__ == "__main__":
