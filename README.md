@@ -5,7 +5,7 @@ Windows ortamında bu sözlüğün güzel bir benzerini kullanmaktaydım. Linux 
 
 Çalıştırma
 
-
+[![sozlux screenshot](https://github.com/mustafairan/sozlux/raw/master/screenshot.jpg)](https://github.com/mustafairan/sozlux/raw/master/screenshot.jpg)
 main.py dosyası yardımı ile çalıştırabilirsiniz.
 
 Windows için binary halini winx86binary dizininin altında bulabilirsiniz. main exe aracılığıyla çalıştırabilirsiniz. Binary sürüm için gereklilikler geçerli değildir.
@@ -15,9 +15,9 @@ Windows için binary halini winx86binary dizininin altında bulabilirsiniz. main
 Gereklilikler
 
 
-Python 2x sürümü (3x ile test etmedim muhtemelen sytax problemleri çıkacaktır)
+Python 2x sürümü (3x ile test etmedim muhtemelen syntax problemleri çıkacaktır)
 
-QT ve PyQt4
+QT4 ve PyQt4
 
 
 
@@ -35,7 +35,6 @@ Eklenecekler
 
 Boot ile birlikte başlatma seçeneği
 
-Tray ikonuna saklanabilme oradan açılabilme
 
 Bazı klavye kısayolları
 
