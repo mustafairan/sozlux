@@ -8,7 +8,7 @@ Windows ortamında bu sözlüğün güzel bir benzerini kullanmaktaydım. Linux 
 [![sozlux screenshot](https://github.com/mustafairan/sozlux/raw/master/screenshot.jpg)](https://github.com/mustafairan/sozlux/raw/master/screenshot.jpg)
 main.py dosyası yardımı ile çalıştırabilirsiniz.
 
-Windows için binary halini winx86binary dizininin altında bulabilirsiniz. main exe aracılığıyla çalıştırabilirsiniz. Binary sürüm için gereklilikler geçerli değildir.
+Windows için binary halini winx86binary dizininin altında bulabilirsiniz. Binary sürüm için gereklilikler geçerli değildir.
 
 
 
